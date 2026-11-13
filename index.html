@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#17131e">
+  <title>The 21st Measure · 1986 — The First Measure</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><span class="ankh">☥</span><div><strong>THE 21ST MEASURE</strong><small>CHAPTER 01 · 1986 — THE FIRST MEASURE</small></div></div>
+      <div class="top-actions"><span class="day-label"><i></i><span id="dayText">DAY 01 · MORNING</span><em id="markStage">MARK · POINT</em></span><button class="top-btn" id="journalBtn">JOURNAL <b id="journalCount">0</b></button><button class="top-btn" id="inventoryBtn">INVENTORY</button><button class="top-btn pause-btn" id="pauseBtn">Ⅱ</button></div>
+    </header>
+
+    <section class="game-frame">
+      <div class="game-topline"><span>EGYPT · CAIRO OUTSKIRTS</span><span id="worldStatus">THE FAMILY FARM</span></div>
+      <div class="canvas-wrap">
+        <canvas id="gameCanvas" width="1280" height="720" aria-label="The 21st Measure side scrolling game"></canvas>
+        <div class="canvas-objective"><small>CURRENT OBJECTIVE</small><b id="objectiveText">Compare the northern and southern plots.</b><div class="mini-progress"><i id="progressFill"></i></div><small id="progressText">0 / 3 INVESTIGATION STEPS</small></div>
+        <div class="interaction-prompt" id="interactionPrompt">E · INVESTIGATE</div>
+        <div class="mobile-controls" aria-label="Touch controls">
+          <div class="move-controls"><button class="control-btn" id="leftBtn" aria-label="Move left">◀</button><button class="control-btn" id="rightBtn" aria-label="Move right">▶</button></div>
+          <div class="action-controls"><button class="control-btn run-control" id="runBtn">RUN</button><button class="control-btn interact-control" id="interactBtn">INVESTIGATE</button></div>
+        </div>
+      </div>
+      <section class="bottom-panel">
+        <div class="dialogue-copy"><small id="speaker">SALAH</small><p id="dialogueText">The southern field has been losing color for weeks. Father says the water is fine. I should check the land myself.</p></div>
+        <button id="dismissDialogue" class="continue-btn">CONTINUE <span>›</span></button>
+      </section>
+    </section>
+
+    <footer class="controls-help"><span> A / D OR ← → MOVE</span><span> SHIFT RUN</span><span> E INVESTIGATE</span><span> J JOURNAL · I INVENTORY · ESC PAUSE</span></footer>
+  </main>
+
+
+  <div class="cinematic" id="cinematic" aria-hidden="true">
+    <div class="cinematic-backdrop" id="cinematicBackdrop"></div>
+    <section class="cinematic-card" aria-live="polite">
+      <div class="cinematic-rule"><span>☥</span><i></i><span>THE 21ST MEASURE</span></div>
+      <small class="cinematic-eyebrow" id="cineEyebrow">ANCIENT HELIOPOLIS · DUSK</small>
+      <h1 id="cineTitle">THE UNWRITTEN BOUNDARY</h1>
+      <p class="cinematic-body" id="cineBody"></p>
+      <div class="cinematic-dialogue" id="cineDialogue">
+        <small id="cineSpeaker"></small>
+        <p id="cineLine"></p>
+      </div>
+      <div class="cinematic-footer"><span id="cineStep">01 / 03</span><button id="cineContinue" type="button">CONTINUE <b>›</b></button></div>
+    </section>
+  </div>
+
+  <div class="modal" id="modal" aria-hidden="true"><section class="modal-card"><header class="modal-head"><div><small id="modalEyebrow">FIELD NOTES · 1986</small><h2 id="modalTitle">Salah’s Journal</h2></div><button id="closeModal" class="close-btn">×</button></header><div id="modalContent" class="modal-content"></div></section></div>
+  <script src="game.js"></script>
+</body>
+</html>
